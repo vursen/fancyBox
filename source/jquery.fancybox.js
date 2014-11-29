@@ -1811,10 +1811,12 @@
 			var overlay = this.overlay;
 
 			$('.fancybox-overlay').stop(true, true);
-
-			if (!overlay) {
+			
+			// Bag. Fancybox couldn't open window second time
+			/*if (!overlay) {
 				this.create(opts);
-			}
+			}*/
+			this.create(opts);
 
 			if (opts.locked && this.fixed && obj.fixed) {
 				obj.locked = this.overlay.append( obj.wrap );
